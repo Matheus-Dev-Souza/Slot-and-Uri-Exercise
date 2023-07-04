@@ -1,14 +1,9 @@
-const readline = require('readline');
+var input = require("fs").readFileSync("stdin", "utf8");
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+var PI = 3.14159;
+var raio = parseFloat(input);
 
-rl.question('Enter the value of R: ', (R) => {
-  const pi = 3.14159;
-  const area = pi * R * R;
 
-  console.log(`A=${area.toFixed(4)}`);
-  rl.close();
-});
+var area = PI * Math.pow(raio, 2);
+
+console.log("A =" + area.toFixed(4));
