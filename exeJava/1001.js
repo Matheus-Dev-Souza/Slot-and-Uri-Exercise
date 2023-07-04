@@ -1,8 +1,12 @@
-const readline = require('readline-sync');
+{/* Extremely Basic*/}
 
-const a = parseInt(readline.question('Primeiro valor: '));
-const b = parseInt(readline.question('Segundo valor: '));
+var input = require("fs").readFileSync("stdin", "utf8");
 
-const x = a + b;
+var valores = input.split("\n");
 
-console.log(x);
+var A = parseInt(valores.shift());
+var B = parseInt(valores.shift());
+
+var X = A + B;
+
+console.log("X = " + X);
